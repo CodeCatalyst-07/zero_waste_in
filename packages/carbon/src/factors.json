@@ -1,0 +1,167 @@
+{
+  "version": "2026.2.0",
+  "updatedAt": "2026-03-01T00:00:00Z",
+  "factors": {
+    "wet_composting_avoided_ch4": {
+      "value": 0.35,
+      "unit": "kgCO2e/kg",
+      "source": "CPCB & IPCC Guidelines for National Greenhouse Gas Inventories (India Waste Sector)",
+      "year": 2024,
+      "description": "Avoided methane emissions from diverting organic wet waste to decentralized composting rather than anaerobic unmanaged dumps",
+      "confidence": "high"
+    },
+    "wet_biomethanation_clean_energy": {
+      "value": 0.52,
+      "unit": "kgCO2e/kg",
+      "source": "Ministry of New and Renewable Energy (MNRE) Bio-energy Program Review",
+      "year": 2023,
+      "description": "Avoided grid electricity and landfill emissions via anaerobic digestion and biogas recovery",
+      "confidence": "high"
+    },
+    "dry_plastic_recycling_avoided": {
+      "value": 1.45,
+      "unit": "kgCO2e/kg",
+      "source": "The Energy and Resources Institute (TERI) India & CPCB Plastic Recycling Life Cycle Assessment",
+      "year": 2023,
+      "description": "Avoided primary polymer petrochemical refining emissions through segregated mechanical recycling",
+      "confidence": "high"
+    },
+    "dry_paper_cardboard_recycling": {
+      "value": 0.92,
+      "unit": "kgCO2e/kg",
+      "source": "Bureau of Energy Efficiency (BEE) & Indian Paper Manufacturers Association (IPMA)",
+      "year": 2024,
+      "description": "Avoided deforestation and virgin pulp chemical processing emissions via recycled paper loop",
+      "confidence": "high"
+    },
+    "dry_aluminum_steel_recycling": {
+      "value": 2.15,
+      "unit": "kgCO2e/kg",
+      "source": "Ministry of Steel & National Metallurgical Laboratory Technical Monograph",
+      "year": 2024,
+      "description": "Avoided bauxite smelting energy and blast furnace emissions via scrap recycling",
+      "confidence": "high"
+    },
+    "sanitary_controlled_incineration": {
+      "value": 0.18,
+      "unit": "kgCO2e/kg",
+      "source": "CPCB Bio-medical and Sanitary Waste Controlled Incineration Emission Standard",
+      "year": 2025,
+      "description": "Net mitigated impact of controlled high-temperature thermal destruction vs unmanaged open burning",
+      "confidence": "high"
+    },
+    "special_care_tsdf_hazardous_mitigation": {
+      "value": 0.44,
+      "unit": "kgCO2e/kg",
+      "source": "MoEFCC Hazardous & Other Wastes Management Guidelines and TSDF Audit",
+      "year": 2024,
+      "description": "Prevented groundwater contamination and toxic fugitive emissions via engineered stabilization",
+      "confidence": "high"
+    },
+    "electricity_grid": {
+      "value": 0.675,
+      "unit": "kgCO2/kWh",
+      "source": "Central Electricity Authority (CEA) CO2 Baseline Database v22.0, FY 2025-26 (all-India weighted average, location-based)",
+      "year": 2025,
+      "priorYearValue": 0.71,
+      "description": "All-India weighted average grid electricity emissions intensity per kWh consumed",
+      "confidence": "high"
+    },
+    "transport_scooter": {
+      "value": 0.037,
+      "unit": "kgCO2/vehicle-km",
+      "source": "India GHG Program Road Transport Emissions Factors, Stakeholder Consultation Draft",
+      "year": 2015,
+      "description": "Four-stroke motorized scooter exhaust emissions per vehicle-km",
+      "confidence": "medium"
+    },
+    "transport_motorcycle": {
+      "value": 0.033,
+      "unit": "kgCO2/vehicle-km",
+      "source": "India GHG Program Road Transport Emissions Factors, Stakeholder Consultation Draft (<=135cc segment)",
+      "year": 2015,
+      "description": "Commuter motorcycle (engine displacement <=135cc) emissions per vehicle-km",
+      "confidence": "medium"
+    },
+    "transport_autorickshaw_petrol": {
+      "value": 0.1135,
+      "unit": "kgCO2/vehicle-km",
+      "source": "India GHG Program Road Transport Emissions Factors, Stakeholder Consultation Draft",
+      "year": 2015,
+      "description": "Three-wheeler passenger autorickshaw running on petrol per vehicle-km",
+      "confidence": "medium"
+    },
+    "transport_autorickshaw_cng": {
+      "value": 0.1077,
+      "unit": "kgCO2/vehicle-km",
+      "source": "India GHG Program Road Transport Emissions Factors, Stakeholder Consultation Draft",
+      "year": 2015,
+      "description": "Three-wheeler passenger autorickshaw running on compressed natural gas (CNG) per vehicle-km",
+      "confidence": "medium"
+    },
+    "transport_hatchback_petrol": {
+      "value": 0.117,
+      "unit": "kgCO2/vehicle-km",
+      "source": "India GHG Program Road Transport Emissions Factors, Stakeholder Consultation Draft (<1000cc segment)",
+      "year": 2015,
+      "description": "Compact petrol hatchback car (<1000cc) emissions per vehicle-km",
+      "confidence": "medium"
+    },
+    "transport_sedan_petrol": {
+      "value": 0.142,
+      "unit": "kgCO2/vehicle-km",
+      "source": "India GHG Program Road Transport Emissions Factors, Stakeholder Consultation Draft (<1400cc segment)",
+      "year": 2015,
+      "description": "Mid-size petrol sedan car (<1400cc) emissions per vehicle-km",
+      "confidence": "medium"
+    },
+    "transport_hatchback_diesel": {
+      "value": 0.105,
+      "unit": "kgCO2/vehicle-km",
+      "source": "India GHG Program Road Transport Emissions Factors, Stakeholder Consultation Draft",
+      "year": 2015,
+      "description": "Compact diesel hatchback passenger car emissions per vehicle-km",
+      "confidence": "medium"
+    },
+    "transport_suv_diesel": {
+      "value": 0.186,
+      "unit": "kgCO2/vehicle-km",
+      "source": "India GHG Program Road Transport Emissions Factors, Stakeholder Consultation Draft (<2000cc segment)",
+      "year": 2015,
+      "description": "Diesel sport utility vehicle (SUV, <2000cc) emissions per vehicle-km",
+      "confidence": "medium"
+    },
+    "transport_city_bus": {
+      "value": 0.0152,
+      "unit": "kgCO2/passenger-km",
+      "source": "India GHG Program Road Transport Emissions Factors, Stakeholder Consultation Draft (Urban transit bus)",
+      "year": 2015,
+      "description": "Standard municipal urban transit bus emissions per passenger-km",
+      "confidence": "medium"
+    },
+    "transport_domestic_flight": {
+      "value": 0.121,
+      "unit": "kgCO2/passenger-km",
+      "source": "India GHG Program Aviation Consultation Draft (Direct emissions, RF=1.0 no uplift convention)",
+      "year": 2015,
+      "description": "Domestic scheduled commercial passenger flight per passenger-km (direct emissions, no uplift convention)",
+      "confidence": "medium-low"
+    },
+    "water_norm_urban": {
+      "value": 135,
+      "unit": "L/person/day",
+      "source": "Ministry of Housing and Urban Affairs / CPHEEO Manual on Water Supply and Treatment",
+      "year": 2024,
+      "description": "Statutory municipal planning norm for domestic piped water supply in urban communities with full sewerage",
+      "confidence": "high"
+    },
+    "water_norm_rural": {
+      "value": 55,
+      "unit": "L/person/day",
+      "source": "Ministry of Jal Shakti / Jal Jeevan Mission Operational Guidelines",
+      "year": 2024,
+      "description": "National planning norm for rural piped drinking water supply per capita per day",
+      "confidence": "high"
+    }
+  }
+}

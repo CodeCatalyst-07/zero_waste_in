@@ -1,0 +1,697 @@
+{
+  "version": "2026.1.0",
+  "rules": [
+    {
+      "id": "vegetable_peels",
+      "label": "Vegetable and fruit peels",
+      "aliases": ["fruit skin", "potato skin", "banana peel", "onion skin", "veggie peel"],
+      "stream": "wet",
+      "basis": "definition",
+      "flags": [],
+      "action": "Put it in the wet (compost) bin.",
+      "reason": "Organic kitchen scrap decomposes naturally into nutrient-rich compost."
+    },
+    {
+      "id": "cooked_food",
+      "label": "Cooked food, rice, dal, leftovers",
+      "aliases": [
+        "leftover rice",
+        "leftover dal",
+        "kitchen waste",
+        "roti scraps",
+        "plate scrapings",
+        "stale food"
+      ],
+      "stream": "wet",
+      "basis": "definition",
+      "flags": [],
+      "action": "Put it in the wet (compost) bin.",
+      "reason": "Cooked kitchen leftovers are biodegradable and suitable for composting or biogas."
+    },
+    {
+      "id": "meat_and_fish_scraps",
+      "label": "Meat and fish scraps",
+      "aliases": ["chicken waste", "fish bones", "mutton scraps", "raw meat", "seafood waste"],
+      "stream": "wet",
+      "basis": "definition",
+      "flags": [],
+      "action": "Put it in the wet (compost) bin.",
+      "reason": "Raw and cooked animal scraps decompose organically in municipal compost streams."
+    },
+    {
+      "id": "large_bones",
+      "label": "Large bones",
+      "aliases": ["beef bone", "mutton bone", "pork bone", "shank bone"],
+      "stream": "wet",
+      "basis": "judgement",
+      "flags": ["rules_vary_by_city", "review_before_launch"],
+      "action": "Put it in the wet (compost) bin.",
+      "reason": "Bones are biodegradable organic matter, though some local compost facilities reject them."
+    },
+    {
+      "id": "egg_shells",
+      "label": "Egg shells",
+      "aliases": ["egg shell", "cracked eggshell", "boiled egg shell"],
+      "stream": "wet",
+      "basis": "judgement",
+      "flags": ["review_before_launch"],
+      "action": "Put it in the wet (compost) bin.",
+      "reason": "Eggshells are mineral-rich organic material that enriches municipal compost."
+    },
+    {
+      "id": "tea_leaves_coffee_grounds",
+      "label": "Tea leaves, coffee grounds",
+      "aliases": ["chai patti", "used tea powder", "coffee filter grounds", "loose tea"],
+      "stream": "wet",
+      "basis": "judgement",
+      "flags": ["review_before_launch"],
+      "action": "Put it in the wet (compost) bin.",
+      "reason": "Used beverage grounds decompose rapidly; remove any plastic pyramid bags beforehand."
+    },
+    {
+      "id": "flowers_pooja_offerings",
+      "label": "Flowers, pooja offerings",
+      "aliases": [
+        "pooja flowers",
+        "marigold garland",
+        "wilted bouquet",
+        "temple flowers",
+        "nirmalya"
+      ],
+      "stream": "wet",
+      "basis": "definition",
+      "flags": [],
+      "action": "Put it in the wet (compost) bin.",
+      "reason": "Floral and pooja offerings are compostable organic plant material."
+    },
+    {
+      "id": "garden_trimmings_dry_leaves",
+      "label": "Garden trimmings, dry leaves",
+      "aliases": [
+        "dry leaves",
+        "grass clippings",
+        "hedge cuttings",
+        "pruned twigs",
+        "fallen leaves"
+      ],
+      "stream": "wet",
+      "basis": "judgement",
+      "flags": ["review_before_launch"],
+      "action": "Put it in the wet (compost) bin.",
+      "reason": "Foliage and plant prunings decompose into organic mulch; keep separated from recyclables."
+    },
+    {
+      "id": "coconut_shell",
+      "label": "Coconut shell",
+      "aliases": ["coconut coir", "coconut husk", "nariyal shell", "dry coconut shell"],
+      "stream": "wet",
+      "basis": "judgement",
+      "flags": ["rules_vary_by_city", "review_before_launch"],
+      "action": "Put it in the wet (compost) bin.",
+      "reason": "Hard shells are organic, but slow degradation causes some cities to sort them dry."
+    },
+    {
+      "id": "used_cooking_oil",
+      "label": "Used cooking oil",
+      "aliases": ["waste fry oil", "spent vegetable oil", "cooking grease", "leftover frying oil"],
+      "stream": null,
+      "basis": "judgement",
+      "flags": ["rules_vary_by_city", "review_before_launch"],
+      "action": "Seal it in a bottle and check municipal guidance.",
+      "reason": "Liquid fats clog drains and disrupt composting; separate municipal collection guidelines apply.",
+      "guidance": "The rules don't clearly cover this. Seal it in a bottle and ask your local body how to dispose of it."
+    },
+    {
+      "id": "spoiled_packaged_food",
+      "label": "Spoiled packaged food (contents)",
+      "aliases": [
+        "rotten bread",
+        "expired yoghurt",
+        "spoiled curry",
+        "moldy bread",
+        "curdled milk"
+      ],
+      "stream": "wet",
+      "basis": "judgement",
+      "flags": ["review_before_launch"],
+      "action": "Put it in the wet (compost) bin.",
+      "reason": "Empty food contents into organic waste and place outer packaging in dry recycling."
+    },
+    {
+      "id": "newspaper_paper",
+      "label": "Newspaper, paper, cardboard",
+      "aliases": ["newspaper", "cardboard box", "scrap paper", "packing carton", "shredded paper"],
+      "stream": "dry",
+      "basis": "definition",
+      "flags": [],
+      "action": "Put it in the dry bin; rinse if dirty.",
+      "reason": "Clean paper and cardboard fibers are valuable feedstocks for domestic paper recycling mills."
+    },
+    {
+      "id": "plastic_bottle",
+      "label": "Plastic bottles (PET), jugs",
+      "aliases": ["water bottle", "soda bottle", "plastic beverage bottle", "shampoo jug"],
+      "stream": "dry",
+      "basis": "definition",
+      "flags": ["rinse_first"],
+      "action": "Put it in the dry bin; rinse if dirty.",
+      "reason": "Clean polyethylene terephthalate bottles are mechanically recycled into new polymer products."
+    },
+    {
+      "id": "milk_pouch",
+      "label": "Milk pouches, carry bags",
+      "aliases": ["polythene", "milk packet", "plastic grocery bag", "poly pouch", "doodh packet"],
+      "stream": "dry",
+      "basis": "definition",
+      "flags": [],
+      "action": "Put it in the dry bin; rinse if dirty.",
+      "reason": "Low-density polyethylene film can be reprocessed into recycled plastic granules."
+    },
+    {
+      "id": "chips_and_biscuit_wrappers",
+      "label": "Chips and biscuit wrappers (multilayer plastic)",
+      "aliases": [
+        "snack wrapper",
+        "crisp packet",
+        "silver plastic wrapper",
+        "metallized pouch",
+        "biscuit packet"
+      ],
+      "stream": "dry",
+      "basis": "definition",
+      "flags": [],
+      "action": "Put it in the dry bin; rinse if dirty.",
+      "reason": "Multilayer packaging is collected under extended producer responsibility for energy recovery."
+    },
+    {
+      "id": "tetra_pak_cartons",
+      "label": "Tetra pak cartons",
+      "aliases": ["juice carton", "aseptic package", "beverage carton", "paper milk box"],
+      "stream": "dry",
+      "basis": "definition",
+      "flags": ["rules_vary_by_city", "conflicting_sources"],
+      "action": "Put it in the dry bin; rinse if dirty.",
+      "reason": "Aseptic composite cartons are processed at specialized paper pulp recovery units."
+    },
+    {
+      "id": "thermocol",
+      "label": "Thermocol (EPS)",
+      "aliases": ["styrofoam", "eps packaging", "polystyrene foam", "thermocol block"],
+      "stream": "dry",
+      "basis": "definition",
+      "flags": ["rules_vary_by_city"],
+      "action": "Put it in the dry bin; rinse if dirty.",
+      "reason": "Expanded polystyrene packaging is classified as dry, though local recycling access varies."
+    },
+    {
+      "id": "glass_bottle",
+      "label": "Glass bottles and jars",
+      "aliases": ["glass jar", "jam jar", "beer bottle", "pickle bottle", "empty sauce jar"],
+      "stream": "dry",
+      "basis": "definition",
+      "flags": [],
+      "action": "Put it in the dry bin; rinse if dirty.",
+      "reason": "Intact glassware is infinitely recyclable when segregated free of contamination."
+    },
+    {
+      "id": "broken_glass",
+      "label": "Broken glass",
+      "aliases": [
+        "broken window glass",
+        "broken mirror shards",
+        "broken drinking glass",
+        "glass shards"
+      ],
+      "stream": "dry",
+      "basis": "conflict",
+      "flags": ["conflicting_sources", "wrap_before_disposal", "review_before_launch"],
+      "action": "Put it in the dry bin; rinse if dirty.",
+      "reason": "Broken glass belongs in dry waste but must be wrapped to prevent sanitation worker injuries."
+    },
+    {
+      "id": "broken_crockery_ceramics",
+      "label": "Broken crockery, ceramics",
+      "aliases": ["broken plate", "ceramic shards", "cracked mug", "clay cup", "broken porcelain"],
+      "stream": "dry",
+      "basis": "conflict",
+      "flags": ["conflicting_sources", "wrap_before_disposal", "review_before_launch"],
+      "action": "Put it in the dry bin; rinse if dirty.",
+      "reason": "Ceramics cannot be melted like glass; wrap sharp fragments before dry disposal."
+    },
+    {
+      "id": "metal_cans_tins_utensils",
+      "label": "Metal cans, tins, utensils",
+      "aliases": ["tin can", "food tin", "steel utensil", "metal container", "old aluminium pan"],
+      "stream": "dry",
+      "basis": "definition",
+      "flags": [],
+      "action": "Put it in the dry bin; rinse if dirty.",
+      "reason": "Aluminium, tin, and steel scrap are high-value dry recyclables with mature reprocessing chains."
+    },
+    {
+      "id": "aluminium_foil",
+      "label": "Aluminium foil",
+      "aliases": ["foil wrap", "silver foil", "foil container", "takeaway foil lid"],
+      "stream": "dry",
+      "basis": "definition",
+      "flags": [],
+      "action": "Put it in the dry bin; rinse if dirty.",
+      "reason": "Clean foil scrap is remelted into secondary aluminium; shake off food particles."
+    },
+    {
+      "id": "old_clothes_textiles",
+      "label": "Old clothes, textiles",
+      "aliases": ["worn shirt", "old rags", "fabric scrap", "torn jeans", "discarded bedsheet"],
+      "stream": "dry",
+      "basis": "definition",
+      "flags": [],
+      "action": "Put it in the dry bin; rinse if dirty.",
+      "reason": "Discarded fabric scraps and worn garments are sorted dry for fiber shredding or reuse."
+    },
+    {
+      "id": "footwear_leather_rubber",
+      "label": "Footwear, leather, rubber",
+      "aliases": ["old shoes", "rubber slipper", "leather belt", "broken chappal", "sneakers"],
+      "stream": "dry",
+      "basis": "definition",
+      "flags": [],
+      "action": "Put it in the dry bin; rinse if dirty.",
+      "reason": "Non-biodegradable shoes and synthetic rubber items are directed to industrial energy recovery."
+    },
+    {
+      "id": "wood_furniture_scraps",
+      "label": "Wood, furniture scraps",
+      "aliases": ["wooden plank", "broken chair leg", "plywood scrap", "timber offcut"],
+      "stream": "dry",
+      "basis": "definition",
+      "flags": [],
+      "action": "Put it in the dry bin; rinse if dirty.",
+      "reason": "Treated wood, plywood pieces, and small wooden furniture scraps are collected with dry combustibles."
+    },
+    {
+      "id": "books_magazines",
+      "label": "Books, magazines",
+      "aliases": ["old notebook", "glossy magazine", "school textbook", "phone directory"],
+      "stream": "dry",
+      "basis": "definition",
+      "flags": [],
+      "action": "Put it in the dry bin; rinse if dirty.",
+      "reason": "Paperback books, notebooks, and print periodicals are prime dry recyclables."
+    },
+    {
+      "id": "plastic_cutlery_straws_cups",
+      "label": "Plastic cutlery, straws, cups",
+      "aliases": [
+        "plastic spoon",
+        "plastic fork",
+        "disposable cup",
+        "drinking straw",
+        "plastic party plate"
+      ],
+      "stream": "dry",
+      "basis": "definition",
+      "flags": [],
+      "action": "Put it in the dry bin; rinse if dirty.",
+      "reason": "Disposable rigid plastics belong in dry recyclables despite challenging mechanical recovery."
+    },
+    {
+      "id": "paper_cups_plates",
+      "label": "Paper cups, plates",
+      "aliases": ["disposable paper cup", "paper thali", "coffee paper cup", "takeout paper bowl"],
+      "stream": "dry",
+      "basis": "definition",
+      "flags": [],
+      "action": "Put it in the dry bin; rinse if dirty.",
+      "reason": "Poly-lined paper foodware belongs in dry waste for thermal or specialized fiber extraction."
+    },
+    {
+      "id": "greasy_pizza_box",
+      "label": "Greasy pizza box",
+      "aliases": ["pizza carton", "greasy cardboard", "oil soaked food box"],
+      "stream": "dry",
+      "basis": "judgement",
+      "flags": ["review_before_launch"],
+      "action": "Put it in the dry bin; rinse if dirty.",
+      "reason": "Corrugated cardboard boxes are collected dry; scrape off leftover crusts and cheese."
+    },
+    {
+      "id": "bubble_wrap_packaging_film",
+      "label": "Bubble wrap, packaging film",
+      "aliases": [
+        "bubble wrap",
+        "air pillows",
+        "cling wrap",
+        "ecommerce plastic packaging",
+        "shrink wrap"
+      ],
+      "stream": "dry",
+      "basis": "definition",
+      "flags": [],
+      "action": "Put it in the dry bin; rinse if dirty.",
+      "reason": "Flexible packaging films and air cushioning wrap are dry recyclable polyethylenes."
+    },
+    {
+      "id": "plastic_toys",
+      "label": "Plastic toys (no electronics)",
+      "aliases": ["toy blocks", "plastic doll", "toy car", "beach bucket toy"],
+      "stream": "dry",
+      "basis": "definition",
+      "flags": [],
+      "action": "Put it in the dry bin; rinse if dirty.",
+      "reason": "Molded plastic toys without electronic circuitry or batteries belong in general dry recyclables."
+    },
+    {
+      "id": "used_tissue_and_paper_napkins",
+      "label": "Used tissue and paper napkins",
+      "aliases": [
+        "paper napkin",
+        "facial tissue",
+        "used tissue",
+        "dining table napkin",
+        "paper towel"
+      ],
+      "stream": null,
+      "basis": "conflict",
+      "flags": ["conflicting_sources", "review_before_launch"],
+      "action": "Check hygiene use to select container.",
+      "reason": "Sanitary contamination determines whether tissue belongs in dry or sanitary containment.",
+      "followUp": {
+        "question": "Was it used for blood or bodily fluids?",
+        "options": [
+          { "label": "No, just clean or food-soiled", "stream": "dry" },
+          { "label": "Yes", "stream": "sanitary" }
+        ]
+      }
+    },
+    {
+      "id": "cigarette_butts",
+      "label": "Cigarette butts",
+      "aliases": ["cigarette filter", "bidi butt", "smoked stub", "cigar tip"],
+      "stream": "dry",
+      "basis": "judgement",
+      "flags": ["review_before_launch"],
+      "action": "Put it in the dry bin; rinse if dirty.",
+      "reason": "Cellulose acetate filters do not biodegrade rapidly and belong in residual dry waste."
+    },
+    {
+      "id": "dust_sweepings_ash",
+      "label": "Dust, sweepings, ash",
+      "aliases": ["floor sweepings", "room dust", "wood ash", "vacuum bag dust", "incense ash"],
+      "stream": "dry",
+      "basis": "judgement",
+      "flags": ["review_before_launch"],
+      "action": "Put it in the dry bin; rinse if dirty.",
+      "reason": "Inert floor sweepings and fireplace ash belong in the non-biodegradable residual dry stream."
+    },
+    {
+      "id": "empty_cosmetic_bottles_tubes",
+      "label": "Empty cosmetic bottles, tubes",
+      "aliases": ["lotion tube", "empty sunscreen bottle", "toothpaste tube", "face wash bottle"],
+      "stream": "dry",
+      "basis": "judgement",
+      "flags": ["review_before_launch"],
+      "action": "Put it in the dry bin; rinse if dirty.",
+      "reason": "Empty cosmetic tubes are dry recyclables; leftover nail polish requires special-care disposal."
+    },
+    {
+      "id": "diaper",
+      "label": "Diapers (baby and adult)",
+      "aliases": ["nappy", "adult diaper", "baby diaper", "soiled nappy"],
+      "stream": "sanitary",
+      "basis": "definition",
+      "flags": ["wrap_before_disposal"],
+      "action": "Wrap it securely and keep it in the sanitary waste container.",
+      "reason": "Soiled diapers contain pathogenic biological material requiring dedicated sanitary disposal."
+    },
+    {
+      "id": "sanitary_pad",
+      "label": "Sanitary pads, tampons",
+      "aliases": ["menstrual pad", "sanitary napkin", "tampon", "pantyliner", "period pad"],
+      "stream": "sanitary",
+      "basis": "definition",
+      "flags": ["wrap_before_disposal"],
+      "action": "Wrap it securely and keep it in the sanitary waste container.",
+      "reason": "Used menstrual hygiene products must be wrapped securely in paper before disposal."
+    },
+    {
+      "id": "condoms",
+      "label": "Condoms",
+      "aliases": ["latex condom", "used contraceptive", "rubber sheath"],
+      "stream": "sanitary",
+      "basis": "definition",
+      "flags": ["wrap_before_disposal"],
+      "action": "Wrap it securely and keep it in the sanitary waste container.",
+      "reason": "Latex prophylaxis contains personal body fluid and must be wrapped for sanitary handling."
+    },
+    {
+      "id": "wet_wipes",
+      "label": "Wet wipes",
+      "aliases": ["disinfectant wipe", "cleansing wipe", "baby wipe", "makeup remover wipe"],
+      "stream": "sanitary",
+      "basis": "judgement",
+      "flags": ["review_before_launch"],
+      "action": "Wrap it securely and keep it in the sanitary waste container.",
+      "reason": "Synthetic fiber wipes do not decompose and carry bodily residues requiring sanitary handling."
+    },
+    {
+      "id": "used_bandages_plasters_cotton",
+      "label": "Used bandages, plasters, cotton",
+      "aliases": ["cotton swab", "used plaster", "gauze strip", "medical cotton", "band aid"],
+      "stream": null,
+      "basis": "conflict",
+      "flags": ["conflicting_sources", "review_before_launch"],
+      "action": "Check degree of fluid saturation to select container.",
+      "reason": "Level of biological fluid saturation distinguishes sanitary handling from special-care hazard.",
+      "followUp": {
+        "question": "Is it soaked with blood or body fluids?",
+        "options": [
+          { "label": "No, only lightly soiled", "stream": "sanitary" },
+          { "label": "Yes, soaked", "stream": "special_care" }
+        ]
+      }
+    },
+    {
+      "id": "tube_light",
+      "label": "CFL, tube lights",
+      "aliases": ["tube light", "cfl", "fluorescent bulb", "cfl bulb", "tubelight"],
+      "stream": "special_care",
+      "basis": "definition",
+      "flags": [],
+      "action": "Keep it separate and hand it to a designated collection point.",
+      "reason": "Fluorescent lamps contain toxic mercury vapor requiring isolated hazardous handling."
+    },
+    {
+      "id": "led_bulbs",
+      "label": "LED bulbs",
+      "aliases": ["led bulb", "led lamp", "led spotlight", "led tube"],
+      "stream": "special_care",
+      "basis": "judgement",
+      "flags": ["separate_regime_ewaste", "review_before_launch"],
+      "action": "Keep it separate and hand it to a designated collection point.",
+      "reason": "Solid-state lamps contain integrated circuit boards governed by electronic waste management."
+    },
+    {
+      "id": "aa_battery",
+      "label": "AA/AAA and button-cell batteries",
+      "aliases": [
+        "aa battery",
+        "aaa battery",
+        "button cell",
+        "watch battery",
+        "alkaline cell",
+        "torch battery"
+      ],
+      "stream": "special_care",
+      "basis": "definition",
+      "flags": ["separate_regime_battery"],
+      "action": "Keep it separate and hand it to a designated collection point.",
+      "reason": "Dry electrochemical cells contain heavy metals governed under Battery Waste Management Rules."
+    },
+    {
+      "id": "phone_power_bank_lithium_batteries",
+      "label": "Phone, power-bank, lithium batteries",
+      "aliases": [
+        "power bank",
+        "lithium battery",
+        "phone battery",
+        "laptop battery",
+        "rechargeable cell"
+      ],
+      "stream": "special_care",
+      "basis": "definition",
+      "flags": ["separate_regime_battery", "fire_risk"],
+      "action": "Keep it separate and hand it to a designated collection point.",
+      "reason": "Lithium-ion cells present severe combustion hazards and require authorized battery recyclers."
+    },
+    {
+      "id": "expired_medicine",
+      "label": "Expired or unused medicines",
+      "aliases": [
+        "expired tablet",
+        "cough syrup bottle",
+        "painkiller capsule",
+        "antibiotic pills",
+        "unused medicine"
+      ],
+      "stream": "special_care",
+      "basis": "definition",
+      "flags": ["no_dosing_advice"],
+      "action": "Keep it separate and hand it to a designated collection point.",
+      "reason": "Pharmaceuticals can contaminate municipal water supplies and require domestic hazardous disposal."
+    },
+    {
+      "id": "paint_can",
+      "label": "Paint cans, thinners",
+      "aliases": [
+        "paint can",
+        "varnish tin",
+        "paint thinner bottle",
+        "enamel paint can",
+        "turpentine"
+      ],
+      "stream": "special_care",
+      "basis": "definition",
+      "flags": [],
+      "action": "Keep it separate and hand it to a designated collection point.",
+      "reason": "Solvent vapors and synthetic pigments are volatile domestic hazardous substances."
+    },
+    {
+      "id": "pesticide_insecticide_containers",
+      "label": "Pesticide, insecticide, mosquito-repellent containers",
+      "aliases": [
+        "mosquito spray",
+        "pesticide bottle",
+        "ant spray can",
+        "insect killer spray",
+        "weedicide bottle"
+      ],
+      "stream": "special_care",
+      "basis": "definition",
+      "flags": [],
+      "action": "Keep it separate and hand it to a designated collection point.",
+      "reason": "Toxic agrochemical and repellent residues are hazardous domestic chemical wastes."
+    },
+    {
+      "id": "mercury_thermometer",
+      "label": "Mercury thermometer",
+      "aliases": [
+        "mercury thermometer",
+        "clinical thermometer",
+        "broken thermometer",
+        "mercury glass tube"
+      ],
+      "stream": "special_care",
+      "basis": "definition",
+      "flags": [],
+      "action": "Keep it separate and hand it to a designated collection point.",
+      "reason": "Liquid elemental mercury is extremely neurotoxic and requires specialized hazardous recovery."
+    },
+    {
+      "id": "used_needles_syringes",
+      "label": "Used needles, syringes (home)",
+      "aliases": [
+        "insulin syringe",
+        "hypodermic needle",
+        "lancet",
+        "disposable syringe",
+        "used needle"
+      ],
+      "stream": "special_care",
+      "basis": "definition",
+      "flags": ["wrap_before_disposal"],
+      "action": "Keep it separate and hand it to a designated collection point.",
+      "reason": "Medical sharps pose serious puncture injury and infection risks to sanitation workers."
+    },
+    {
+      "id": "contaminated_gauze",
+      "label": "Contaminated gauze",
+      "aliases": ["blood soaked gauze", "infected dressing", "surgical gauze", "drainage cotton"],
+      "stream": "special_care",
+      "basis": "definition",
+      "flags": [],
+      "action": "Keep it separate and hand it to a designated collection point.",
+      "reason": "Heavily bio-contaminated wound dressings carry infectious pathogen transmission risks."
+    },
+    {
+      "id": "phones_chargers_small_electronics",
+      "label": "Phones, chargers, cables, small electronics",
+      "aliases": [
+        "broken phone",
+        "usb cable",
+        "phone charger",
+        "old earphones",
+        "broken mouse",
+        "headphones"
+      ],
+      "stream": "special_care",
+      "basis": "judgement",
+      "flags": ["separate_regime_ewaste", "review_before_launch"],
+      "action": "Keep it separate and hand it to a designated collection point.",
+      "reason": "Consumer electronics contain recoverable precious metals governed under E-Waste Rules."
+    },
+    {
+      "id": "printer_cartridges",
+      "label": "Printer cartridges",
+      "aliases": [
+        "ink cartridge",
+        "toner cartridge",
+        "laser printer toner",
+        "empty inkjet cartridge"
+      ],
+      "stream": "special_care",
+      "basis": "judgement",
+      "flags": ["separate_regime_ewaste", "review_before_launch"],
+      "action": "Keep it separate and hand it to a designated collection point.",
+      "reason": "Toner microparticles and printer electrical components require authorized e-waste collection."
+    },
+    {
+      "id": "cleaning_chemical_containers",
+      "label": "Cleaning chemical (acid, phenyl) containers",
+      "aliases": [
+        "toilet cleaner bottle",
+        "acid bottle",
+        "phenyl bottle",
+        "drain cleaner bottle",
+        "bleach container"
+      ],
+      "stream": "special_care",
+      "basis": "judgement",
+      "flags": ["review_before_launch"],
+      "action": "Keep it separate and hand it to a designated collection point.",
+      "reason": "Corrosive acid and phenyl residues can burn handlers and damage waste facilities."
+    },
+    {
+      "id": "razor_blades",
+      "label": "Razor blades",
+      "aliases": [
+        "shaving blade",
+        "razor blade",
+        "box cutter blade",
+        "utility knife blade",
+        "shaving razor"
+      ],
+      "stream": "special_care",
+      "basis": "judgement",
+      "flags": ["wrap_before_disposal", "review_before_launch"],
+      "action": "Keep it separate and hand it to a designated collection point.",
+      "reason": "Exposed sharp steel blades cause severe lacerations to manual waste segregators."
+    },
+    {
+      "id": "aerosol_cans",
+      "label": "Aerosol cans",
+      "aliases": ["deodorant can", "spray paint can", "hair spray bottle", "air freshener spray"],
+      "stream": null,
+      "basis": "judgement",
+      "flags": ["rules_vary_by_city", "review_before_launch"],
+      "action": "Check if pressurized contents remain.",
+      "reason": "Pressurized propellants pose explosion risks if crushed before complete emptying.",
+      "followUp": {
+        "question": "Is the can completely empty?",
+        "options": [
+          { "label": "Yes, empty", "stream": "dry", "message": "rules vary by city" },
+          { "label": "No, not empty", "stream": "special_care" }
+        ]
+      }
+    }
+  ]
+}
