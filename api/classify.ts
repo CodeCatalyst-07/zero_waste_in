@@ -1,3 +1,4 @@
+import crypto from 'node:crypto';
 import type { IncomingMessage, ServerResponse } from 'node:http';
 import type { ClassifyErrorCode } from '@zerowastein/contract';
 import { decide, lookupByText, rulesTable, type Attributes } from '@zerowastein/rules';
@@ -196,7 +197,14 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
     }
 
     // 4. Request body parsing and validation
-    const body = req.body as Record<string, unknown> | undefined;
+    let body = req.body as Record<string, unknown> | undefined;
+    if (typeof body === 'string') {
+      try {
+        body = JSON.parse(body);
+      } catch {
+        // invalid JSON string handled below
+      }
+    }
     if (!body || typeof body !== 'object' || Array.isArray(body)) {
       outcomeCode = 400;
       sendErrorResponse(res, 400, 'BAD_INPUT', 'Invalid JSON request body.', requestId);
@@ -466,8 +474,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
         degraded: false,
       },
     });
-  } catch {
+  } catch (err: unknown) {
     outcomeCode = 500;
+    console.error('Unhandled classification error:', err);
     sendErrorResponse(
       res,
       500,

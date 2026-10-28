@@ -64,7 +64,7 @@ export const rawEnvSchema = z.object({
   PROVIDER_ORDER: z
     .string()
     .optional()
-    .default('jarvis,gemini,gemma_gemini')
+    .default('jarvis,gemini')
     .transform(
       (val) =>
         val
