@@ -1,7 +1,7 @@
 import rulesJson from '../packages/rules/src/rules.json' with { type: 'json' };
 import { decide } from '../packages/rules/src/decide.js';
 import { lookupByText } from '../packages/rules/src/lookup.js';
-import type { Attributes, RuleRow, RulesDataset } from '../packages/rules/src/types.js';
+import type { Attributes, RulesDataset } from '../packages/rules/src/types.js';
 
 interface EvalResult {
   query: string;

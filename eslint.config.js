@@ -19,5 +19,18 @@ export default tseslint.config(
       ],
       '@typescript-eslint/explicit-function-return-type': 'off',
     },
+  },
+  // Relax strict typing rules in test, eval, and e2e files
+  {
+    files: [
+      '**/*.test.ts',
+      '**/*.test.tsx',
+      '**/*.spec.ts',
+      'eval/**/*.ts',
+      'e2e/**/*.ts',
+    ],
+    rules: {
+      '@typescript-eslint/no-explicit-any': 'off',
+    },
   }
 );
