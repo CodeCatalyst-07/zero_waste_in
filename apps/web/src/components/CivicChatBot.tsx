@@ -124,7 +124,7 @@ export function CivicChatBot(): React.JSX.Element {
   return (
     <aside
       aria-label="Civic AI Chatbot Assistant"
-      className="fixed bottom-5 right-4 sm:right-6 z-40 select-none"
+      className="fixed bottom-24 md:bottom-10 right-4 sm:right-6 z-50 select-none"
     >
       {/* Floating Launcher Button */}
       {!isOpen && (
@@ -158,7 +158,7 @@ export function CivicChatBot(): React.JSX.Element {
           role="dialog"
           aria-modal="false"
           aria-labelledby="chat-window-title"
-          className="w-[92vw] sm:w-[380px] h-[520px] max-h-[82vh] bg-surface-container-lowest rounded-3xl shadow-2xl border border-hairline/80 flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-200"
+          className="w-[92vw] sm:w-[380px] h-[520px] max-h-[75vh] bg-surface-container-lowest rounded-3xl shadow-2xl border border-hairline/80 flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-200"
         >
           {/* Header */}
           <div className="bg-primary text-on-primary px-4 py-3.5 flex items-center justify-between shadow-sm">
