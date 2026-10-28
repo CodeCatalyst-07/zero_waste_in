@@ -12,9 +12,9 @@ import zlib from 'node:zlib';
 
 // Budget thresholds (+20% allowance over current baseline)
 // Baseline entry JS: 84.90 kB gzip -> Budget: 102.00 kB gzip
-// Baseline entry CSS: 5.82 kB gzip -> Budget: 7.20 kB gzip
+// Baseline entry CSS (Tailwind v4 compiled bundle): 14.12 kB gzip -> Budget: 18.00 kB gzip
 const ENTRY_JS_GZIP_BUDGET_KB = 102.0;
-const ENTRY_CSS_GZIP_BUDGET_KB = 7.2;
+const ENTRY_CSS_GZIP_BUDGET_KB = 18.0;
 
 interface AssetMetrics {
   name: string;
