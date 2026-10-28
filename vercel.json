@@ -6,6 +6,9 @@
   "functions": {
     "api/classify.ts": {
       "maxDuration": 15
+    },
+    "api/chat.ts": {
+      "maxDuration": 25
     }
   },
   "headers": [

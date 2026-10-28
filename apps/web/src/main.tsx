@@ -5,6 +5,7 @@ import './styles/app.css';
 
 import React, { Suspense, useEffect, useRef, useState } from 'react';
 import ReactDOM from 'react-dom/client';
+import { CivicChatBot } from './components/CivicChatBot.js';
 import { SortScreen } from './features/sort/SortScreen.js';
 
 /** Lazy-load the impact tally tab to optimize first contentful paint. */
@@ -581,6 +582,9 @@ export function App(): React.JSX.Element {
           </div>
         </div>
       )}
+
+      {/* Floating Civic Eco-Assistant Chatbot (Google Gemma via Jarvis Labs) */}
+      <CivicChatBot />
     </div>
   );
 }
