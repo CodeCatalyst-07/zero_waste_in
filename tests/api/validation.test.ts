@@ -1,7 +1,7 @@
 import { describe, expect, it, vi } from 'vitest';
-import { attributesSchema, parseAttributesPayload, stripControlCharacters } from '../../api/schemas.js';
-import { JarvisIdentifier } from '../../api/providers/jarvis.js';
-import { ProviderInvalidOutput } from '../../api/providers/errors.js';
+import { attributesSchema, parseAttributesPayload, stripControlCharacters } from '../../api/_lib/schemas.js';
+import { JarvisIdentifier } from '../../api/_lib/providers/jarvis.js';
+import { ProviderInvalidOutput } from '../../api/_lib/providers/errors.js';
 
 describe('api/schemas & validation', () => {
   const validAttributes = {
@@ -187,7 +187,7 @@ describe('provider retry on validation failure', () => {
   });
 
   it('rate limiter handles zero or negative limits and evicts stale entries', async () => {
-    const { consumeRateLimitToken, resetRateLimits } = await import('../../api/rate-limit.js');
+    const { consumeRateLimitToken, resetRateLimits } = await import('../../api/_lib/rate-limit.js');
     resetRateLimits();
 
     // 0 or negative limit allows all

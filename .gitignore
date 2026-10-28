@@ -29,6 +29,10 @@ npm-debug.log*
 pnpm-debug.log*
 yarn-debug.log*
 
+# Screenshots
+Screenshot*
+*.png
+
 # System and editor caches
 .DS_Store
 Thumbs.db

@@ -1,8 +1,8 @@
 import crypto from 'node:crypto';
 import type { IncomingMessage, ServerResponse } from 'node:http';
 import { GoogleGenAI } from '@google/genai';
-import { loadConfig } from './config.js';
-import { consumeRateLimitToken } from './rate-limit.js';
+import { loadConfig } from './_lib/config.js';
+import { consumeRateLimitToken } from './_lib/rate-limit.js';
 
 export interface VercelRequest extends IncomingMessage {
   body?: unknown;

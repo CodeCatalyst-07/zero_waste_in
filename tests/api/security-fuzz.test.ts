@@ -215,7 +215,7 @@ describe('Security & Fuzzing: /api/classify', () => {
 
     it('catches unexpected internal exceptions and returns 500 PROVIDERS_UNAVAILABLE safely', async () => {
       const { setSystemContext } = await import('../../api/classify.js');
-      const { loadConfig } = await import('../../api/config.js');
+      const { loadConfig } = await import('../../api/_lib/config.js');
 
       setSystemContext({
         config: loadConfig(),

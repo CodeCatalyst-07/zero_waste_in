@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest';
 import type { Attributes } from '@zerowastein/rules';
-import type { AppConfig } from '../../api/config.js';
-import { ProviderRateLimited, ProviderServerError, ProviderTimeout } from '../../api/providers/errors.js';
-import { ProviderRouter } from '../../api/providers/router.js';
-import type { Identifier, IdentifyInput } from '../../api/providers/types.js';
+import type { AppConfig } from '../../api/_lib/config.js';
+import { ProviderRateLimited, ProviderServerError, ProviderTimeout } from '../../api/_lib/providers/errors.js';
+import { ProviderRouter } from '../../api/_lib/providers/router.js';
+import type { Identifier, IdentifyInput } from '../../api/_lib/providers/types.js';
 
 /** Creates a mock Attributes object with customizable attributes. */
 function mockAttributes(overrides: Partial<Attributes> = {}): Attributes {

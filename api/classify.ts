@@ -2,9 +2,9 @@ import crypto from 'node:crypto';
 import type { IncomingMessage, ServerResponse } from 'node:http';
 import type { ClassifyErrorCode } from '@zerowastein/contract';
 import { decide, lookupByText, rulesTable, type Attributes } from '@zerowastein/rules';
-import { loadConfig, type AppConfig } from './config.js';
-import { createRouter, type ProviderRouter } from './providers/index.js';
-import { consumeRateLimitToken } from './rate-limit.js';
+import { loadConfig, type AppConfig } from './_lib/config.js';
+import { createRouter, type ProviderRouter } from './_lib/providers/index.js';
+import { consumeRateLimitToken } from './_lib/rate-limit.js';
 
 /** Vercel Node runtime serverless request contract. */
 export interface VercelRequest extends IncomingMessage {
