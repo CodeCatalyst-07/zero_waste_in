@@ -37,6 +37,7 @@
     "apps/*/src/**/*",
     "apps/*/test/**/*",
     "api/**/*",
+    "tests/**/*",
     "vitest.config.ts"
   ]
 }

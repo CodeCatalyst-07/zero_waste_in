@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import handler, { resetSystemContext, type VercelRequest, type VercelResponse } from '../classify.js';
+import handler, { resetSystemContext, type VercelRequest, type VercelResponse } from '../../api/classify.js';
 
 interface MockResponse {
   statusCode: number;
@@ -203,19 +203,19 @@ describe('Security & Fuzzing: /api/classify', () => {
 
         // Check for leakages
         const serialized = JSON.stringify(body);
-        expect(serialized).not.toContain('stack');
-        expect(serialized).not.toContain('at ');
-        expect(serialized).not.toContain('node:');
-        expect(serialized).not.toContain('/Users/');
-        expect(serialized).not.toContain('/home/');
-        expect(serialized).not.toContain('jarvis');
-        expect(serialized).not.toContain('gemini');
+        expect(serialized.includes('stack')).toBe(false);
+        expect(serialized.includes('at ')).toBe(false);
+        expect(serialized.includes('node:')).toBe(false);
+        expect(serialized.includes('/Users/')).toBe(false);
+        expect(serialized.includes('/home/')).toBe(false);
+        expect(serialized.includes('jarvis')).toBe(false);
+        expect(serialized.includes('gemini')).toBe(false);
       }
     });
 
     it('catches unexpected internal exceptions and returns 500 PROVIDERS_UNAVAILABLE safely', async () => {
-      const { setSystemContext } = await import('../classify.js');
-      const { loadConfig } = await import('../config.js');
+      const { setSystemContext } = await import('../../api/classify.js');
+      const { loadConfig } = await import('../../api/config.js');
 
       setSystemContext({
         config: loadConfig(),
@@ -237,7 +237,7 @@ describe('Security & Fuzzing: /api/classify', () => {
       expect(mockRes.statusCode).toBe(500);
       expect((mockRes.body as any).error.code).toBe('PROVIDERS_UNAVAILABLE');
       expect((mockRes.body as any).error.message).toContain('unexpected error');
-      expect(JSON.stringify(mockRes.body)).not.toContain('Fatal database crash');
+      expect(JSON.stringify(mockRes.body).includes('Fatal database crash')).toBe(false);
     });
   });
 
@@ -258,9 +258,9 @@ describe('Security & Fuzzing: /api/classify', () => {
 
       // Verify log contains zero query text, image data, or secrets
       const rawLog = JSON.stringify(parsedLog);
-      expect(rawLog).not.toContain('cardboard box');
-      expect(rawLog).not.toContain('key');
-      expect(rawLog).not.toContain('base64');
+      expect(rawLog.includes('cardboard box')).toBe(false);
+      expect(rawLog.includes('key')).toBe(false);
+      expect(rawLog.includes('base64')).toBe(false);
 
       logSpy.mockRestore();
     });

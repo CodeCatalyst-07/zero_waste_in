@@ -1,0 +1,20 @@
+# Test suites and test fixtures
+tests/
+apps/web/test/
+packages/*/test/
+test-fixtures/
+e2e/
+eval/
+coverage/
+playwright-report/
+test-results/
+
+# Documentation and design assets
+docs/
+stitch_zerowastein_eco_platform/
+
+# Logs and environment
+*.log
+.env
+.env.*
+!.env.example

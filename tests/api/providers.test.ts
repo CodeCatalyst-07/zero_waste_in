@@ -5,10 +5,10 @@ import {
   ProviderRateLimited,
   ProviderServerError,
   ProviderTimeout,
-} from '../providers/errors.js';
-import { GeminiIdentifier } from '../providers/gemini.js';
-import { GemmaGeminiIdentifier } from '../providers/gemma-gemini.js';
-import { JarvisIdentifier } from '../providers/jarvis.js';
+} from '../../api/providers/errors.js';
+import { GeminiIdentifier } from '../../api/providers/gemini.js';
+import { GemmaGeminiIdentifier } from '../../api/providers/gemma-gemini.js';
+import { JarvisIdentifier } from '../../api/providers/jarvis.js';
 
 describe('api/providers: Adapter unit and error mapping tests', () => {
   describe('GemmaGeminiIdentifier', () => {

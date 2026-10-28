@@ -30,7 +30,7 @@ export default defineConfig({
     testTimeout: 30000,
     include: [
       'packages/**/test/**/*.test.ts',
-      'api/test/**/*.test.ts',
+      'tests/api/**/*.test.ts',
       'apps/web/test/**/*.{test.ts,test.tsx}',
     ],
     coverage: {
@@ -49,7 +49,7 @@ export default defineConfig({
         '**/test/**',
         'apps/web/vite.dev-api.ts',
         'apps/web/src/vite-env.d.ts',
-        'api/test/**',
+        'tests/api/**',
       ],
       thresholds: {
         'packages/rules/src/**': {

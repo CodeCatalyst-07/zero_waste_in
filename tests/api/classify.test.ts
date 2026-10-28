@@ -5,11 +5,11 @@ import handler, {
   setSystemContext,
   type VercelRequest,
   type VercelResponse,
-} from '../classify.js';
-import type { AppConfig } from '../config.js';
-import { ProviderRouter } from '../providers/router.js';
-import type { Identifier, IdentifyInput } from '../providers/types.js';
-import { resetRateLimits } from '../rate-limit.js';
+} from '../../api/classify.js';
+import type { AppConfig } from '../../api/config.js';
+import { ProviderRouter } from '../../api/providers/router.js';
+import type { Identifier, IdentifyInput } from '../../api/providers/types.js';
+import { resetRateLimits } from '../../api/rate-limit.js';
 
 /** Base64 string for a valid 1x1 transparent PNG. */
 const VALID_1X1_PNG_BASE64 =
@@ -439,7 +439,7 @@ describe('adapter live contract tests', () => {
   it.skipIf(!process.env.GEMINI_API_KEY)(
     'gemini adapter satisfies Attributes schema against live AI Studio',
     async () => {
-      const { GeminiIdentifier } = await import('../providers/gemini.js');
+      const { GeminiIdentifier } = await import('../../api/providers/gemini.js');
       const gemini = new GeminiIdentifier(
         {
           apiKey: process.env.GEMINI_API_KEY!,
@@ -465,7 +465,7 @@ describe('adapter live contract tests', () => {
   it.skipIf(!process.env.JARVISLABS_API_KEY)(
     'jarvis adapter satisfies Attributes schema against live Jarvis Labs endpoint',
     async () => {
-      const { JarvisIdentifier } = await import('../providers/jarvis.js');
+      const { JarvisIdentifier } = await import('../../api/providers/jarvis.js');
       const jarvis = new JarvisIdentifier({
         apiKey: process.env.JARVISLABS_API_KEY!,
         baseUrl: process.env.JARVISLABS_BASE_URL || 'https://models.jarvislabs.net/v1',

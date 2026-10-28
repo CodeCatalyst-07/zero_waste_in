@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest';
-import { loadConfig } from '../config.js';
-import { createProviderChain } from '../providers/index.js';
-import { JarvisIdentifier } from '../providers/jarvis.js';
-import { GeminiIdentifier } from '../providers/gemini.js';
-import { GemmaGeminiIdentifier } from '../providers/gemma-gemini.js';
+import { loadConfig } from '../../api/config.js';
+import { createProviderChain } from '../../api/providers/index.js';
+import { JarvisIdentifier } from '../../api/providers/jarvis.js';
+import { GeminiIdentifier } from '../../api/providers/gemini.js';
+import { GemmaGeminiIdentifier } from '../../api/providers/gemma-gemini.js';
 
 describe('api/config', () => {
   it('applies statutory defaults and skips unconfigured providers without crashing', () => {
